@@ -1,0 +1,120 @@
+/* CSS Variables for reuse */
+:root {
+    --primary-color: #621e88;
+    --secondary-color: #e1a4ee;
+    --background-color: #F9FBE7;
+    --font-family: 'Open Sans', sans-serif;
+    --font-size: 18px;
+}
+
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    background-image: url('./fa13a8167308a55acc0312befd7ad03a.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    line-height: 1.6;
+}
+
+/* Grid Container */
+.page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+}
+
+.intro {
+    grid-column: 1 / 2;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Header styles */
+header {
+    background-color: var(--primary-color);
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Main Content */
+.main.supporting {
+    grid-column: 1 / 2;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Sidebar */
+.sidebar {
+    grid-column: 2 / 3;
+    padding: 30px;
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.sidebar h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+/* Footer styles */
+footer {
+    grid-column: 1 / -1;
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+footer a {
+    margin-right: 15px;
+}
+
+footer a:last-child {
+    margin-right: 0;
+}
+
+/* Enhancements */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* :first-child example */
+.sidebar :first-child {
+    font-weight: bold;
+}
+
+/* ::before example */
+.sidebar h2::before {
+    content: '🌳';
+    margin-right: 8px;
+}
